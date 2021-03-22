@@ -9,12 +9,12 @@ SET USER=%~1
 SET PASSWORD=%~2
 
 :: set service features
-SET SERVICENAME= "TestService"
-SET BINPATH= "C:\Users\gr14171\Desktop\ccsetup518.exe"
-SET DISPLAYNAME= "TestService"
+SET SERVICENAME= "W_Teste"
+SET BINPATH= "C:\Program Files\Wireshark\capinfos.exe"
+SET DISPLAYNAME= "W_Teste_DN"
 
 :: Creating service
 ECHO Creating %SERVICENAME% service with %USER%...
-sc create %SERVICENAME% binpath= %BINPATH% DisplayName= %DISPLAYNAME% obj= %USER% password= %PASSWORD% start= auto
+SC create %SERVICENAME% binpath= %BINPATH% DisplayName= %DISPLAYNAME% obj= %USER% password= %PASSWORD% start= auto
 
-pause
+PAUSE
